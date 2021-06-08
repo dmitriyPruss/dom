@@ -15,17 +15,18 @@ btn.after(document.createElement('br'));
 // 2) Отобразить картинку. Сделать так, что бы при появлении страницы 
 // отображалсь одна картинка, а при наведении мышью на неё отображалась другая.
 
+const mainImg = 'https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg';
+
 const img = document.createElement('img');
-img.src = 'https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg';
-img.width = img.height = '300';
+img.src = mainImg;
+img.width = img.height = 300;
 btn.nextElementSibling.after(img);
 
 img.addEventListener('mouseover', function() {
     img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirwV3sJSSt0Xf8C43cLbEv2sJR_qWmMpAKnEhdmZbl2b8Cnu8LKZ_CDDvidqsKm4-00k&usqp=CAU';
 });
-
 img.addEventListener('mouseout', function() {
-    img.src = 'https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg';
+    img.src = mainImg;
 });
 
 // 3) Сгенерировать заданную структуру:
